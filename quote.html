@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>Rocket Elevators | COMMERCIAL SERVICES</title>
+		<title>Rocket Elevators | Quotation</title>
 		<meta name="description" content="" />
 		<meta name="Author" content="Dorin Grigoras" />
 
@@ -177,58 +177,50 @@
 				<!-- /Top Nav -->
 
 			</div>
+            <div class="heading-title heading-dotted text-center">
+                <h2>Quotation</h2>
+            </div>
+
+    <!-- FORM -->
+    <div class="col-md-8 text-left">     
+        <form action="php/contact.php" method="post" enctype="multipart/form-data">
+            <fieldset>
+                <input type="hidden" name="action" value="contact_send" />
 
 
+                
+                        
+                <label for="project_type">Select project type:</label>
+                <select class="form-control pointer" name="project_type">
+                    <option value="">--- Select ---</option>
+                    <option value="Residential">Residential</option>
+                    <option value="Commercial">Commercial</option>
+                    <option value="Corporate">Corporate</option>
+                    <option value="Hybrid">Hybrid</option>
+                </select>
+                        
+                
+                
+                <label for="product_line"> Choose the product line you wish to install: </label>
+                  <input type="radio" id="Standard" name="product_line" value="Standard">
+                  <label for="Standard">Standard</label><br>
+                  <input type="radio" id="Premium" name="product_line" value="Premium">
+                  <label for="Premium">Premium</label><br>
+                  <input type="radio" id="Excelium" name="product_line" value="Excelium">
+                  <label for="Excelium">Excelium</label>
 
-			
+                
+            </fieldset>
 
+            <div class="row">
+                <div class="col-md-8">
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> SUBMIT</button>
+                </div>
+            </div>
+        </form>
 
-			<hr class="m-0" /><!-- 1px line separator -->
-
-			<!-- Services -->
-			<section id="services">
-				<div class="container">
-					<div class="heading-title heading-dotted text-center" style="color: #ccc">
-						<h2>
-						COMMERCIAL SERVICES 
-						<br>
-						</h2>
-					</div>
-					<div class="row">
-						<div class="col-sm-4">
-							<!--<a class="image-hover lightbox" href="https://vimeo.com/ondemand/buildingwithawareness/108669033" data-plugin-options='{"type":"iframe"}'>
-								<span class="image-hover-icon image-hover-dark"><!-- image-hover-light | image-hover-dark -->
-													
-							<img class="img-fluid" src="Rocket_Elevator_Assets/fast.jpg" alt="img" />
-							</a>
-
-							<h3 class="mt-10">FAST</h3>
-							<p>Fast yet comfortable.</p>
-						</div>
-
-						<div class="col-sm-4">
-							<!--<a class="image-hover lightbox" href="https://www.youtube.com/watch?v=ZhCyoDlltbo" data-plugin-options='{"type":"iframe"}'>
-							<span class="image-hover-icon image-hover-dark"><!-- image-hover-light | image-hover-dark -->
-							
-							<img class="img-fluid" src="Rocket_Elevator_Assets/efficient.png" alt="img" />
-							</a>
-							<h3 class="mt-10">EFFICIENT</h3>
-							<p>Top of the line lifts software.</p>
-						</div>
-
-						<div class="col-sm-4">
-							<img class="img-fluid" src="Rocket_Elevator_Assets/safe.jpg" alt="img" />
-							<h3 class="mt-10">SAFE</h3>
-							<p>We have above average safety requirements and have the track record to prove it.<br><br></p>
-						</div>
-
-					</div>
-
-				</div>
-			</section>
-			<!-- /Services -->
-
-			<!-- FOOTER -->
+    </div>
+		<!-- FOOTER -->
 			<footer id="footer">
 				<div class="container">
 
@@ -287,7 +279,7 @@
 				</div>
 
 			</footer>
-			<!-- /FOOTER -->
+		<!-- /FOOTER -->
 
 		</div>
 		<!-- /wrapper -->
