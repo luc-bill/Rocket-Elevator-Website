@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>Rocket Elevators | Quotation</title>
+		<title>Rocket Elevators | QUOTATIONS</title>
 		<meta name="description" content="" />
 		<meta name="Author" content="Dorin Grigoras" />
 
@@ -177,51 +177,113 @@
 				<!-- /Top Nav -->
 
 			</div>
-            <div class="heading-title heading-dotted text-center">
-                <h2>Quotation</h2>
-            </div>
 
-    <!-- FORM -->
-    <div class="col-md-8 text-left">     
-        <form action="php/contact.php" method="post" enctype="multipart/form-data">
+
+
+			
+
+
+			<hr class="m-0" /><!-- 1px line separator -->
+
+		
+
+        <!-- FORM -->
+        
+		<section id="quotations">
+			<script type="text/javascript" src="assets/js/quote.js"></script>
+			<div class="container">
+				<div class="heading-title heading-dotted text-center" style="color: #ccc">
+					<h2>
+					Quotation 
+					<br>
+					</h2>
+				</div>
+		<form action="" id="quotations" onsubmit="return false;">
+               
             <fieldset>
-                <input type="hidden" name="action" value="contact_send" />
+				<legend>Preliminary cost analysis for your project</legend>
+				
+			<label >Type of project</label>
+			<select id="projectType" name='projectType'
+             onchange="calculateTotal()">
+             <option value="None">--Select--</option>
+             <option value="Residential">Residential</option>
+             <option value="Commercial">Commercial</option>
+             <option value="Corporate">Corporate</option>
+             <option value="Hybrid">Hydrid</option>
+
+            </select>
+             <br/>
+             <br>
+
+             <label >Product line</label>
+             <input type="radio"  name="productLine" value="Standard" onclick="calculateTotal()" />
+             Standard<br>
+             <input type="radio"  name="productLine" value="Premium" onclick="calculateTotal()" />
+             Premium<br>
+             <input type="radio"  name="productLine" value="Excelium" onclick="calculateTotal()" />
+             Excelium<br>
+            <br><br>
+			
+			<label for="apartmentsNum">Number of apartments in the building</label>
+			<input type="number"  name="apartmentsNum" id="apartmentsNum" />
+            
+			<label for="basementsNum"><br>Number of basements contained in the building</label>
+			<input type="number"  name="basementsNum" id="basementsNum" />
+
+			<label for="businessNum"><br>The number of distinct businesses</label>
+			<input type="number"  name="businessNum" id="businessNum" />
+
+			<label for="floorsNum"><br>Number of floors contained in the building, excluding basements</label>
+			<input type="number"  name="floorsNum" id="floorsNum" />
+			
+			<label for="parkingSpacesNum"><br>Number of parking spaces available</label>
+			<input type="number"  name="parkingSpacesNum" id="parkingSpacesNum" />
+
+			<label for="elevatorsNum"><br>Number of elevator cages to be deployed</label>
+			<input type="number"  name="elevatorsNum" id="elevatorsNum" />
+
+			<label for="companiesNum"><br>Number of separate tenant companies</label>
+			<input type="number"  name="companiesNum" id="companiesNum" />
+
+			<label for="maxOccupantsNum"><br>Maximum number of occupants per floor</label>
+			<input type="number"  name="maxOccupantsNum" id="maxOccupantsNum" />
+			
+			<label for="hoursNum"><br>Number of hours of activity of the building (maximum 24)</label>
+			<input type="number" max="24" name="hoursNum" id="hoursNum" />   
+             
+             <p>
+             <label for='includecandles' class="inlinelabel">
+             Include Candles($5)</label>
+             <input type="checkbox" id="includecandles" name='includecandles'
+             onclick="calculateTotal()" />
+            </p>
+          
+             <p>
+             <label class="inlinelabel" for='includeinscription'>
+             Include Inscription($20)</label>
+             <input type="checkbox" id="includeinscription"
+             name="includeinscription" onclick="calculateTotal()" />
+          
+             <input type="text"  id="theinscription"
+             name="theinscription" value="Enter Inscription"  />
+             </p>
+             <div id="totalPrice"></div>
+          
+             </fieldset>
+         </form>
+         
+        
 
 
-                
-                        
-                <label for="project_type">Select project type:</label>
-                <select class="form-control pointer" name="project_type">
-                    <option value="">--- Select ---</option>
-                    <option value="Residential">Residential</option>
-                    <option value="Commercial">Commercial</option>
-                    <option value="Corporate">Corporate</option>
-                    <option value="Hybrid">Hybrid</option>
-                </select>
-                        
-                
-                
-                <label for="product_line"> Choose the product line you wish to install: </label>
-                  <input type="radio" id="Standard" name="product_line" value="Standard">
-                  <label for="Standard">Standard</label><br>
-                  <input type="radio" id="Premium" name="product_line" value="Premium">
-                  <label for="Premium">Premium</label><br>
-                  <input type="radio" id="Excelium" name="product_line" value="Excelium">
-                  <label for="Excelium">Excelium</label>
 
-                
-            </fieldset>
+        <!--/FORM -->   
+        
+        
 
-            <div class="row">
-                <div class="col-md-8">
-                    <button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> SUBMIT</button>
-                </div>
-            </div>
-        </form>
-
-    </div>
-		<!-- FOOTER -->
-			<footer id="footer">
+    
+ 			<!-- FOOTER -->
+			 <footer id="footer">
 				<div class="container">
 
 
@@ -279,7 +341,7 @@
 				</div>
 
 			</footer>
-		<!-- /FOOTER -->
+			<!-- /FOOTER -->
 
 		</div>
 		<!-- /wrapper -->
