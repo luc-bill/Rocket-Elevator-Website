@@ -190,7 +190,7 @@
         <!-- FORM -->
         
 		<section id="quotations">
-			<script type="text/javascript" src="assets/js/quote.js"></script>
+			
 			<div class="container">
 				<div class="heading-title heading-dotted text-center" style="color: #ccc">
 					<h2>
@@ -198,9 +198,9 @@
 					<br>
 					</h2>
 				</div>
-		<form action="" id="quotations" onsubmit="return false;">
+	<form action="" id="quotations" onsubmit="return false;">
                
-            <fieldset>
+        <fieldset>
 				<legend>Preliminary cost analysis for your project</legend>
 				
 			<label >Type of project</label>
@@ -225,7 +225,7 @@
             <br><br>
 			
 			<div class="form-group" id="residentialGroup">
-				<div class="row">	
+				<div class="col">	
 					<label for="apartmentsNum"><br>Number of apartments in the building</label>
 					<input type="number"  name="apartmentsNum" id="apartmentsNum" />
 					<label for="floorsNum"><br>Number of floors contained in the building, excluding basements</label>
@@ -236,7 +236,7 @@
 			</div>
 
 			<div class="form-group" id="commercialGroup">
-				<div class="row">	
+				<div class="col">	
 					<label for="businessNum"><br>The number of distinct businesses</label>
 					<input type="number"  name="businessNum" id="businessNum" />	
 					<label for="floorsNum"><br>Number of floors contained in the building, excluding basements</label>
@@ -251,7 +251,7 @@
 			</div>
 
 			<div class="form-group" id="corporateGroup">
-				<div class="row">	
+				<div class="col">	
 					<label for="companiesNum"><br>Number of separate tenant companies</label>
 					<input type="number"  name="companiesNum" id="companiesNum" />	
 					<label for="floorsNum"><br>Number of floors contained in the building, excluding basements</label>
@@ -266,7 +266,7 @@
 			</div>
 
 			<div class="form-group" id="hybridGroup">
-				<div class="row">	
+				<div class="col">	
 					<label for="businessNum"><br>The number of distinct businesses</label>
 					<input type="number"  name="businessNum" id="businessNum" />	
 					<label for="floorsNum"><br>Number of floors contained in the building, excluding basements</label>
@@ -282,27 +282,24 @@
 				</div>
 			</div>
 
-
-             <p>
-             <label for='includecandles' class="inlinelabel">
-             Include Candles($5)</label>
-             <input type="checkbox" id="includecandles" name='includecandles'
-             onclick="calculateTotal()" />
-            </p>
-          
-             <p>
-             <label class="inlinelabel" for='includeinscription'>
-             Include Inscription($20)</label>
-             <input type="checkbox" id="includeinscription"
-             name="includeinscription" onclick="calculateTotal()" />
-          
-             <input type="text"  id="theinscription"
-             name="theinscription" value="Enter Inscription"  />
-             </p>
-             <div id="totalPrice"></div>
-          
-             </fieldset>
-         </form>
+			<div class="form-group" id="totalGroup">
+				<div class="col">	
+					<h3>Detail of the quote</h3>
+					<div id="unitNum">Number Unit Suggested:<br> 
+						<input id="unitNum" type="text" disabled=""></div>
+					<div id="unitPrice">Elevator Unit Price:<br> 
+						<input id="unitPrice" type="text" disabled=""></div>
+					<div id="unit_x_price">Elevator Total price:<br> 
+						<input id="unit_x_price" type="text" disabled="" class="box_shadow_input"></div>
+					<div id="installationFees">Installation costs : <br>
+						<input id="installationFees" type="text" disabled="" class="box_shadow_input"></div>
+					<div id="total">Total project cost:<br> 
+						<input id="Total" type="text" disabled="" class="box_shadow_input"></div>
+				</div>
+			</div>
+	          
+         </fieldset>
+	</form>
          
         
 
@@ -393,6 +390,7 @@
 		<!-- JAVASCRIPT FILES -->
 		<script>var plugin_path = 'assets/plugins/';</script>
 		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="assets/js/quote.js"></script>
 
 		<script src="assets/js/scripts.js"></script>
 		

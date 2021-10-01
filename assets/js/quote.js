@@ -1,20 +1,29 @@
-$("#projectType").change(function() {
-    if ($(this).val() == "None") {
-      $('#residentialGroup').hide();
-      $('#commercialGroup').hide();
-      $('#corporateGroup').hide();
-      $('#hybridGroup').hide();
-    } else if ($(this).val() == "Residential") {
-        $('#residentialGroup').show();                
-    } else if ($(this).val() == "Commercial") {
-        $('#commercialGroup').show();
-    } else if ($(this).val() == "Corporate") {
-        $('#corporateGroup').show();
-    } else if ($(this).val() == "Hybrid") {
-        $('#hybridGroup').show();
-    }
-});
-$("#projectType").trigger("change")
+$( document ).ready(function() { 
+  function hideMe() {
+    $('#residentialGroup').hide();
+        $('#commercialGroup').hide();
+        $('#corporateGroup').hide();
+        $('#hybridGroup').hide();
+  }
+  $("#projectType").change(function() {
+      if ($(this).val() == "None") {
+        hideMe();
+      } else if ($(this).val() == "Residential") {
+        hideMe();
+          $('#residentialGroup').show();                
+      } else if ($(this).val() == "Commercial") {
+        hideMe();
+          $('#commercialGroup').show(); 
+      } else if ($(this).val() == "Corporate") {
+        hideMe();
+          $('#corporateGroup').show();
+      } else if ($(this).val() == "Hybrid") {
+        hideMe();
+          $('#hybridGroup').show();
+      }
+  });
+  $("#projectType").trigger("change")
+}); 
   /*
   
   $("#seeAnotherFieldGroup").change(function() {
