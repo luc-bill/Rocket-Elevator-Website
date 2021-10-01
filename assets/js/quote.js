@@ -1,47 +1,31 @@
 $( document ).ready(function() { 
-  function hideMe() {
-    $('#residentialGroup').hide();
+  function hideGroup() {
+        $('#residentialGroup').hide();
         $('#commercialGroup').hide();
         $('#corporateGroup').hide();
         $('#hybridGroup').hide();
   }
+
   $("#projectType").change(function() {
       if ($(this).val() == "None") {
-        hideMe();
+        hideGroup();
       } else if ($(this).val() == "Residential") {
-        hideMe();
+        hideGroup();
           $('#residentialGroup').show();                
       } else if ($(this).val() == "Commercial") {
-        hideMe();
+        hideGroup();
           $('#commercialGroup').show(); 
       } else if ($(this).val() == "Corporate") {
-        hideMe();
+        hideGroup();
           $('#corporateGroup').show();
       } else if ($(this).val() == "Hybrid") {
-        hideMe();
+        hideGroup();
           $('#hybridGroup').show();
       }
   });
   $("#projectType").trigger("change")
+
 }); 
-  /*
-  
-  $("#seeAnotherFieldGroup").change(function() {
-    if ($(this).val() == "yes") {
-      $('#otherFieldGroupDiv').show();
-      $('#otherField1').attr('required', '');
-      $('#otherField1').attr('data-error', 'This field is required.');
-      $('#otherField2').attr('required', '');
-      $('#otherField2').attr('data-error', 'This field is required.');
-    } else {
-      $('#otherFieldGroupDiv').hide();
-      $('#otherField1').removeAttr('required');
-      $('#otherField1').removeAttr('data-error');
-      $('#otherField2').removeAttr('required');
-      $('#otherField2').removeAttr('data-error');
-    }
-  });
-  $("#seeAnotherFieldGroup").trigger("change");
 
 
 
@@ -60,10 +44,6 @@ $( document ).ready(function() {
 
 
 
-
-
-
-/*
 var theForm = document.forms["quotations"];
 
 var prices = new Array();
@@ -90,7 +70,7 @@ function getElevatorPrice()
             //by using the cake_prices array
             //We get the selected Items value
             //For example cake_prices["Round8".value]"
-             ElevatorPrice = prices[selectedCake[i].value];
+             ElevatorPrice = prices[projectType[i].value];
             //If we get a match then we break out of this loop
             //No reason to continue if we get a match
             break;
@@ -98,5 +78,6 @@ function getElevatorPrice()
     }
     //We return the cakeSizePrice
     return ElevatorPrice;
+    
 }
-*/
+console.log(ElevatorPrice)
