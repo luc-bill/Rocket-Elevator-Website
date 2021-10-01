@@ -204,10 +204,9 @@
 				<legend>Preliminary cost analysis for your project</legend>
 				
 			<label >Type of project</label>
-			<select id="projectType" name='projectType'
-             onchange="calculateTotal()">
+			<select id="projectType" name='projectType'>
              <option value="None">--Select--</option>
-             <option value="Residential">Residential</option>
+             <option value="Residential" >Residential</option>
              <option value="Commercial">Commercial</option>
              <option value="Corporate">Corporate</option>
              <option value="Hybrid">Hydrid</option>
@@ -216,11 +215,11 @@
              <br>
 
              <label >Product line</label>
-             <input type="radio"  name="productLine" value="Standard" onclick="calculateTotal()" />
+             <input type="radio"  name="productLine" value="Standard" onclick="mytest()"/>
              Standard<br>
-             <input type="radio"  name="productLine" value="Premium" onclick="calculateTotal()" />
+             <input type="radio"  name="productLine" value="Premium" onclick="mytest()"/>
              Premium<br>
-             <input type="radio"  name="productLine" value="Excelium" onclick="calculateTotal()" />
+             <input type="radio"  name="productLine" value="Excelium" onclick="mytest()"/>
              Excelium<br>
             <br><br>
 			
@@ -290,19 +289,18 @@
 					<div id="unitPrice">Elevator Unit Price:<br> 
 						<input id="unitPrice" type="text" disabled=""></div>
 					<div id="unit_x_price">Elevator Total price:<br> 
-						<input id="unit_x_price" type="text" disabled="" class="box_shadow_input"></div>
+						<input id="unit_x_price" type="text" disabled=""></div>
 					<div id="installationFees">Installation costs : <br>
-						<input id="installationFees" type="text" disabled="" class="box_shadow_input"></div>
+						<input id="installationFees" type="text" disabled=""></div>
 					<div id="total">Total project cost:<br> 
-						<input id="Total" type="text" disabled="" class="box_shadow_input"></div>
+						<input id="Total" type="text" disabled=""></div>
 				</div>
 			</div>
-	          
          </fieldset>
+		 
 	</form>
          
         
-
 
 
         <!--/FORM -->   
@@ -388,9 +386,64 @@
 
 
 		<!-- JAVASCRIPT FILES -->
+		<script>
+			
+function mytest() {
+
+	var prices = new Array();
+		prices["Standard"]=7565;
+		prices["Premium"]=12345;
+		prices["Excelium"]=15400;
+
+  if (productLine = "Standard") {
+	document.getElementById("Standard").innerHTML = unitPrice;
+  } 
+  console.log("changin")
+}
+
+
+
+var theForm = document.forms["quotations"];
+
+var prices = new Array();
+prices["Standard"]=7565;
+prices["Premium"]=12345;
+prices["Excelium"]=15400;
+
+
+  function getElevatorPrice() {
+
+  let ElevatorPrice = console.log("hello");
+    // var ElevatorPrice=0;
+    // console.log("hello");
+    // var theForm = document.forms["quotations"];
+    // var productLine = theForm.elements["productLine"];
+    // for(var i = 0; i < productLine.length; i++)
+    // {
+    //     if(productLine[i].checked)
+    //     {
+    //         //we set cakeSizePrice to the value of the selected radio button
+    //         //i.e. if the user choose the 8" cake we set it to 25
+    //         //by using the cake_prices array
+    //         //We get the selected Items value
+    //         //For example cake_prices["Round8".value]"
+    //          ElevatorPrice = prices[productLine[i].value];
+    //         //If we get a match then we break out of this loop
+    //         //No reason to continue if we get a match
+    //         break;
+    //     }
+    // }
+    // //We return the cakeSizePrice
+   
+  //return ElevatorPrice
+ 
+}
+
+
+		</script>
 		<script>var plugin_path = 'assets/plugins/';</script>
 		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
-		<script type="text/javascript" src="assets/js/quote.js"></script>
+		<script src="assets/js/quote.js"></script> -->
 
 		<script src="assets/js/scripts.js"></script>
 		
