@@ -1,3 +1,60 @@
+$("#projectType").change(function() {
+    if ($(this).val() == "None") {
+      $('#residentialGroup').hide();
+      $('#commercialGroup').hide();
+      $('#corporateGroup').hide();
+      $('#hybridGroup').hide();
+    } else if ($(this).val() == "Residential") {
+        $('#residentialGroup').show();                
+    } else if ($(this).val() == "Commercial") {
+        $('#commercialGroup').show();
+    } else if ($(this).val() == "Corporate") {
+        $('#corporateGroup').show();
+    } else if ($(this).val() == "Hybrid") {
+        $('#hybridGroup').show();
+    }
+});
+$("#projectType").trigger("change")
+  /*
+  
+  $("#seeAnotherFieldGroup").change(function() {
+    if ($(this).val() == "yes") {
+      $('#otherFieldGroupDiv').show();
+      $('#otherField1').attr('required', '');
+      $('#otherField1').attr('data-error', 'This field is required.');
+      $('#otherField2').attr('required', '');
+      $('#otherField2').attr('data-error', 'This field is required.');
+    } else {
+      $('#otherFieldGroupDiv').hide();
+      $('#otherField1').removeAttr('required');
+      $('#otherField1').removeAttr('data-error');
+      $('#otherField2').removeAttr('required');
+      $('#otherField2').removeAttr('data-error');
+    }
+  });
+  $("#seeAnotherFieldGroup").trigger("change");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 var theForm = document.forms["quotations"];
 
 var prices = new Array();
@@ -33,4 +90,4 @@ function getElevatorPrice()
     //We return the cakeSizePrice
     return ElevatorPrice;
 }
-console.log
+*/

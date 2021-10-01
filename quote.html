@@ -211,8 +211,7 @@
              <option value="Commercial">Commercial</option>
              <option value="Corporate">Corporate</option>
              <option value="Hybrid">Hydrid</option>
-
-            </select>
+			</select>
              <br/>
              <br>
 
@@ -225,33 +224,65 @@
              Excelium<br>
             <br><br>
 			
-			<label for="apartmentsNum">Number of apartments in the building</label>
-			<input type="number"  name="apartmentsNum" id="apartmentsNum" />
-            
-			<label for="basementsNum"><br>Number of basements contained in the building</label>
-			<input type="number"  name="basementsNum" id="basementsNum" />
+			<div class="form-group" id="residentialGroup">
+				<div class="row">	
+					<label for="apartmentsNum"><br>Number of apartments in the building</label>
+					<input type="number"  name="apartmentsNum" id="apartmentsNum" />
+					<label for="floorsNum"><br>Number of floors contained in the building, excluding basements</label>
+					<input type="number"  name="floorsNum" id="floorsNum" />
+					<label for="basementsNum"><br>Number of basements contained in the building</label>
+					<input type="number"  name="basementsNum" id="basementsNum" />
+            	</div>
+			</div>
 
-			<label for="businessNum"><br>The number of distinct businesses</label>
-			<input type="number"  name="businessNum" id="businessNum" />
+			<div class="form-group" id="commercialGroup">
+				<div class="row">	
+					<label for="businessNum"><br>The number of distinct businesses</label>
+					<input type="number"  name="businessNum" id="businessNum" />	
+					<label for="floorsNum"><br>Number of floors contained in the building, excluding basements</label>
+					<input type="number"  name="floorsNum" id="floorsNum" />
+					<label for="basementsNum"><br>Number of basements contained in the building</label>
+					<input type="number"  name="basementsNum" id="basementsNum" />
+					<label for="parkingSpacesNum"><br>Number of parking spaces available</label>
+					<input type="number"  name="parkingSpacesNum" id="parkingSpacesNum" />
+					<label for="elevatorsNum"><br>Number of elevator cages to be deployed</label>
+					<input type="number"  name="elevatorsNum" id="elevatorsNum" />
+            	</div>
+			</div>
 
-			<label for="floorsNum"><br>Number of floors contained in the building, excluding basements</label>
-			<input type="number"  name="floorsNum" id="floorsNum" />
-			
-			<label for="parkingSpacesNum"><br>Number of parking spaces available</label>
-			<input type="number"  name="parkingSpacesNum" id="parkingSpacesNum" />
+			<div class="form-group" id="corporateGroup">
+				<div class="row">	
+					<label for="companiesNum"><br>Number of separate tenant companies</label>
+					<input type="number"  name="companiesNum" id="companiesNum" />	
+					<label for="floorsNum"><br>Number of floors contained in the building, excluding basements</label>
+					<input type="number"  name="floorsNum" id="floorsNum" />
+					<label for="basementsNum"><br>Number of basements contained in the building</label>
+					<input type="number"  name="basementsNum" id="basementsNum" />
+					<label for="parkingSpacesNum"><br>Number of parking spaces available</label>
+					<input type="number"  name="parkingSpacesNum" id="parkingSpacesNum" />
+					<label for="maxOccupantsNum"><br>Maximum number of occupants per floor</label>
+					<input type="number"  name="maxOccupantsNum" id="maxOccupantsNum" />
+            	</div>
+			</div>
 
-			<label for="elevatorsNum"><br>Number of elevator cages to be deployed</label>
-			<input type="number"  name="elevatorsNum" id="elevatorsNum" />
+			<div class="form-group" id="hybridGroup">
+				<div class="row">	
+					<label for="businessNum"><br>The number of distinct businesses</label>
+					<input type="number"  name="businessNum" id="businessNum" />	
+					<label for="floorsNum"><br>Number of floors contained in the building, excluding basements</label>
+					<input type="number"  name="floorsNum" id="floorsNum" />
+					<label for="basementsNum"><br>Number of basements contained in the building</label>
+					<input type="number"  name="basementsNum" id="basementsNum" />
+					<label for="parkingSpacesNum"><br>Number of parking spaces available</label>
+					<input type="number"  name="parkingSpacesNum" id="parkingSpacesNum" />
+					<label for="maxOccupantsNum"><br>Maximum number of occupants per floor</label>
+					<input type="number"  name="maxOccupantsNum" id="maxOccupantsNum" />
+					<label for="hoursNum"><br>Number of hours of activity of the building (maximum 24)</label>
+					<input type="number" max="24" name="hoursNum" id="hoursNum" />
+				</div>
+			</div>
 
-			<label for="companiesNum"><br>Number of separate tenant companies</label>
-			<input type="number"  name="companiesNum" id="companiesNum" />
 
-			<label for="maxOccupantsNum"><br>Maximum number of occupants per floor</label>
-			<input type="number"  name="maxOccupantsNum" id="maxOccupantsNum" />
-			
-			<label for="hoursNum"><br>Number of hours of activity of the building (maximum 24)</label>
-			<input type="number" max="24" name="hoursNum" id="hoursNum" />   
-             
              <p>
              <label for='includecandles' class="inlinelabel">
              Include Candles($5)</label>
